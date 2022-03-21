@@ -19,7 +19,7 @@ public class BubbleSort implements Sort, SortSupport{
     @Override
     public void sort(Sortable collection) {
         int n = collection.size();
-        while(n < 1){
+        while(n > 1){
             for(int i=0; i < n -1; i++){
                 if(comparator.compare(collection.get(i),collection.get(i+1)) > 0){
                     swapper.swap(i, i+1);

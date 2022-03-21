@@ -21,6 +21,7 @@ public class BubbleSortTest {
 
         @Override
         public int size() {
+            System.out.println(actualNames.size());
             return actualNames.size();
         }
     }
@@ -42,12 +43,12 @@ public class BubbleSortTest {
 
     @Test
      public void canSortStrings2(){
-        List<String> actualNames = new ArrayList<>(List.of(
+        List<String> actualNames = new ArrayList<>(Arrays.asList(
                 "Maria", "Diego","Buchecha","Ana", "Nelson"));
 
 
         List<String> expected = new ArrayList<>(List.of(
-                "Ana","Bucheche","Diego","Maria","Nelson"));
+                "Ana","Buchecha","Diego","Maria","Nelson"));
 
 
         ArrayListSortable names = new ArrayListSortable((ArrayList)actualNames);
@@ -66,9 +67,6 @@ public class BubbleSortTest {
         sort.sort(names);
 
         Assert.assertEquals(expected, actualNames);
-
-
-
     }
   };
 
